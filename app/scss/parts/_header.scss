@@ -1,0 +1,153 @@
+.container_header_wrapper {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+.contact_header_block {
+  background: $colorblack;
+}
+
+.header_phone_block {
+  margin-top: 13px;
+
+  span, i {
+    display: inline-block;
+    vertical-align: middle;
+    color: #aaaaaa;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  i {
+    padding-right: 5px;
+  }
+}
+
+.header_social_box {
+  .header_social_icons {
+    list-style: none;
+    font-size: 0;
+    margin: 0;
+    float: right;
+  }
+  .social_icons_element {
+    display: inline-block;
+    border-left: 2px solid #222222;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    &:last-child {
+      border-right: 2px solid #222222;
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      transition: 1s;
+      @include color-link(#aaaaaa);
+      &:hover {
+        color: #fff;
+        transition: 1s;
+      }
+    }
+  }
+}
+
+
+
+.header_contact_row {
+  position: relative;
+  .header_logo_box {
+    position: absolute;
+    z-index: 999;
+    width: 240px;
+    height: 120px;
+    background: $colorred;
+  }
+}
+
+.header_logo_box {
+  img {
+    margin: 17px 0 0 20px;
+  }
+  h1 {
+    color: #fff;
+    font-weight: 600;
+    margin: 0 0 0 20px;
+    a {
+      @include color-link(#fff);
+    }
+    span {
+      font-weight: 300;
+    }
+  }
+  h2 {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+    color: #fff;
+    a {
+      @include color-link(#fff);
+    }
+  }
+
+}
+
+.navigation_wrapper {
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.menu {
+  position: relative;
+  list-style: none;
+  font-size: 0;
+  margin: 0;
+  float: right;
+  li {
+    display: inline-block;
+    padding: 28px 10px;
+
+  }
+  a {
+    display: inline-block;
+    vertical-align: middle;
+    @include color-link(#333333);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    position: relative;
+    width: inherit;
+    &:not(.active_link):hover:after {
+      position: absolute;
+      content: '';
+      top: 20px;
+      left: 0;
+      border-radius: 5px;
+      width: 100%;
+      height: 2px;
+      background: $colorblack;
+      animation: menu_underline 0.7s;
+    }
+
+  }
+}
+
+.submenu {
+  position: absolute;
+  padding: 0;
+  li {
+    display: block;
+    padding: 10px;
+  }
+}
+
+.menu .submenu {
+  display: none;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+.active_link {
+  color: $colorred !important;
+}
