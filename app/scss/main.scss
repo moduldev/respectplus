@@ -3,7 +3,9 @@
 @import "helpers/animation";
 @import "parts/header";
 @import "parts/index";
-
+* {
+  //box-sizing: border-box;
+}
 p,span,a,h1,h2.h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif !important;
 

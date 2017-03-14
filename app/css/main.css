@@ -104,7 +104,7 @@
   float: right; }
   .menu li {
     display: inline-block;
-    padding: 28px 10px; }
+    padding: 27px 10px; }
   .menu a {
     display: inline-block;
     vertical-align: middle;
@@ -151,15 +151,42 @@
   position: relative; }
 
 .remain_massage_box {
+  padding: 100px 0 0 0;
   position: absolute;
-  width: 450px;
-  height: 300px;
-  background: #fff;
-  top: 0;
+  text-align: center;
+  z-index: 50;
+  width: 80%;
+  height: 685px;
+  top: 127px;
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto; }
+  margin: auto;
+  background: rgba(0, 0, 0, 0.3); }
+  .remain_massage_box .index_main_img_title {
+    color: #fff;
+    font-size: 40px; }
+  .remain_massage_box .index_main_img_title:first-child {
+    font-weight: 700; }
+  .remain_massage_box .remain_massage_btn {
+    margin-top: 120px;
+    padding: 20px 60px;
+    font-weight: 700;
+    background: #d84949;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #111111; }
+    .remain_massage_box .remain_massage_btn:link {
+      text-decoration: none;
+      color: #111111; }
+    .remain_massage_box .remain_massage_btn:visited {
+      text-decoration: none;
+      color: #111111; }
+    .remain_massage_box .remain_massage_btn:hover {
+      transition: 0.5s;
+      color: #fff; }
+    .remain_massage_box .remain_massage_btn:checked {
+      cursor: pointer; }
 
 p, span, a, h1, h2.h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif !important; }
