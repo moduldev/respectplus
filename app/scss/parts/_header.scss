@@ -52,20 +52,16 @@
   }
 }
 
-
-
 .header_contact_row {
   position: relative;
-  .header_logo_box {
-    position: absolute;
-    z-index: 999;
-    width: 240px;
-    height: 120px;
-    background: $colorred;
-  }
 }
 
 .header_logo_box {
+  position: absolute;
+  z-index: 999;
+  width: 240px;
+  height: 120px;
+  background: $colorred;
   img {
     margin: 17px 0 0 20px;
   }
@@ -91,6 +87,40 @@
 
 }
 
+//Sticky logo box
+.sticky_header_logo_box {
+  position: absolute;
+  z-index: 999;
+  width: 240px;
+  height: 76px;
+  background: $colorred;
+  img {
+    margin: 2px 0 0 20px;
+    transform: scale(0.7);
+  }
+  h1 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    margin: -6px 0 0 30px;
+    a {
+      @include color-link(#fff);
+    }
+    span {
+      font-weight: 300;
+    }
+  }
+  h2 {
+    margin: -2px 0 0 29px;
+    color: #fff;
+    font-size: 16px;
+    a {
+      @include color-link(#fff);
+    }
+  }
+
+}
+
 .navigation_wrapper {
   background: #fff;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
@@ -105,7 +135,17 @@
   li {
     display: inline-block;
     padding: 27px 10px;
-
+  }
+  li:not(.active_link) a:hover:after {
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: 0;
+    border-radius: 5px;
+    width: 100%;
+    height: 2px;
+    background: $colorblack;
+    animation: menu_underline 0.7s;
   }
   a {
     display: inline-block;
@@ -116,17 +156,6 @@
     font-weight: 700;
     position: relative;
     width: inherit;
-    &:not(.active_link):hover:after {
-      position: absolute;
-      content: '';
-      top: 20px;
-      left: 0;
-      border-radius: 5px;
-      width: 100%;
-      height: 2px;
-      background: $colorblack;
-      animation: menu_underline 0.7s;
-    }
 
   }
 }
@@ -136,7 +165,7 @@
   padding: 0;
   li {
     display: block;
-    padding: 10px;
+    padding: 0;
   }
 }
 
@@ -148,6 +177,34 @@
   display: block;
 }
 
-.active_link {
+.submenu li {
+  background: rgba(255, 255, 255, 0.6);
+
+  a {
+    padding: 10px;
+    width: 100%;
+  }
+  a:hover:after {
+    content: none !important;
+  }
+
+}
+
+.submenu li:hover {
+  background: rgba(216, 73, 73, 1);
+}
+
+.active_link a {
   color: $colorred !important;
+}
+
+.sticky {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+
+  transition: 1s;
 }
